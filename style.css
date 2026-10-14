@@ -272,7 +272,8 @@ p {
 }
 
 /* The hidden attribute sets display:none in the browser's own
-   stylesheet, but our display:flex above would beat it. So repeat it. */
+   stylesheet, but our display rules above would beat it. So repeat it. */
+.adopt-form[hidden],
 .dog-panel[hidden] {
   display: none;
 }
@@ -287,6 +288,23 @@ p {
 
 .dog-stats {
   margin-bottom: 18px;
+}
+
+/* The growth bar. Its width is set by script.js. */
+.growth-track {
+  height: 10px;
+  margin-top: 6px;
+  border-radius: 999px;
+  background: #e4eee1;
+  overflow: hidden;
+}
+
+.growth-fill {
+  width: 25%;
+  height: 100%;
+  border-radius: 999px;
+  background: var(--green);
+  transition: width 0.25s ease;
 }
 
 .dog-actions {
