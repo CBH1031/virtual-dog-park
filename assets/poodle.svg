@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-labelledby="title-poodle">
+  <title id="title-poodle">Illustration of a Poodle</title>
+
+  <!-- background badge -->
+  <circle cx="100" cy="100" r="94" fill="#F1EFFB" />
+
+  <!-- ears: made of overlapping curls, hanging on each side -->
+  <g fill="#F0EADC">
+    <circle cx="50" cy="100" r="16" />
+    <circle cx="44" cy="124" r="15" />
+    <circle cx="52" cy="146" r="12" />
+    <circle cx="150" cy="100" r="16" />
+    <circle cx="156" cy="124" r="15" />
+    <circle cx="148" cy="146" r="12" />
+  </g>
+
+  <!-- head: a cluster of circles, which makes the bumpy curly outline -->
+  <g fill="#F7F3EA">
+    <circle cx="100" cy="92" r="36" />
+    <circle cx="68" cy="74" r="17" />
+    <circle cx="132" cy="74" r="17" />
+    <circle cx="64" cy="98" r="15" />
+    <circle cx="136" cy="98" r="15" />
+    <circle cx="100" cy="60" r="20" />
+  </g>
+
+  <!-- topknot puff -->
+  <g fill="#F7F3EA">
+    <circle cx="100" cy="40" r="21" />
+    <circle cx="78" cy="50" r="13" />
+    <circle cx="122" cy="50" r="13" />
+  </g>
+
+  <!-- a few darker swirls, to hint at the curls -->
+  <g fill="#E4DCCB">
+    <circle cx="82" cy="70" r="5" />
+    <circle cx="118" cy="70" r="5" />
+    <circle cx="70" cy="96" r="6" />
+    <circle cx="130" cy="96" r="6" />
+    <circle cx="100" cy="54" r="5" />
+    <circle cx="56" cy="110" r="5" />
+    <circle cx="144" cy="110" r="5" />
+  </g>
+
+  <!-- muzzle: longer and narrower than the other two breeds -->
+  <ellipse cx="100" cy="126" rx="21" ry="24" fill="#FBF8F2" />
+
+  <!-- nose and mouth -->
+  <ellipse cx="100" cy="116" rx="10" ry="7.5" fill="#241E1B" />
+  <path d="M100 123 v6" fill="none" stroke="#CFC6B6" stroke-width="2.5" stroke-linecap="round" />
+  <path d="M100 129 q-7 5 -12 0" fill="none" stroke="#CFC6B6" stroke-width="2.5" stroke-linecap="round" />
+  <path d="M100 129 q7 5 12 0" fill="none" stroke="#CFC6B6" stroke-width="2.5" stroke-linecap="round" />
+
+  <!-- eyes -->
+  <circle cx="85" cy="88" r="6" fill="#241E1B" />
+  <circle cx="115" cy="88" r="6" fill="#241E1B" />
+  <circle cx="87" cy="86" r="1.9" fill="#FFFFFF" />
+  <circle cx="117" cy="86" r="1.9" fill="#FFFFFF" />
+</svg>

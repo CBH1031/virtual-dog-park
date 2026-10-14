@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Virtual Dog Park</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="wrapper">
+
+    <!-- ================= Header ================= -->
+    <header class="site-header">
+      <h1>Virtual Dog Park</h1>
+      <p class="welcome">
+        Welcome to the park! Three very different dogs are waiting here.
+        Read their notes in the encyclopedia below, then take one out for a walk.
+      </p>
+    </header>
+
+    <main>
+
+      <!-- ================= The interactive park ================= -->
+      <section class="park" aria-labelledby="park-heading">
+        <h2 id="park-heading">The Park</h2>
+        <p id="park-status" class="park-status">
+          The park is quiet. Take a dog for a walk!
+        </p>
+        <button id="clear-button" class="button button-quiet" type="button">
+          Clear the park
+        </button>
+      </section>
+
+      <!-- ================= Dog Encyclopedia ================= -->
+      <section class="encyclopedia" aria-labelledby="encyclopedia-heading">
+        <h2 id="encyclopedia-heading">Dog Encyclopedia</h2>
+        <p class="section-intro">
+          Three breeds, three very different personalities.
+        </p>
+
+        <div class="dog-grid">
+
+          <!-- ---- Beagle ---- -->
+          <article class="dog-card">
+            <img src="assets/beagle.svg" alt="Illustration of a Beagle." width="200" height="200" />
+            <h3>Beagle</h3>
+            <dl class="facts">
+              <dt>Size</dt>
+              <dd>Small to medium &mdash; about 33&ndash;40&nbsp;cm (13&ndash;15&nbsp;in) tall and 9&ndash;14&nbsp;kg (20&ndash;30&nbsp;lb).</dd>
+
+              <dt>Personality</dt>
+              <dd>Friendly, cheerful and endlessly curious. A beagle follows its nose everywhere and hates being left alone.</dd>
+
+              <dt>Everyday care</dt>
+              <dd>Two good walks a day, plus a safe garden to explore. Brush once a week and check inside those long ears.</dd>
+            </dl>
+            <button class="button take-button" type="button" data-breed="Beagle">
+              Take to the park
+            </button>
+          </article>
+
+          <!-- ---- Golden Retriever ---- -->
+          <article class="dog-card">
+            <img src="assets/golden-retriever.svg" alt="Illustration of a Golden Retriever." width="200" height="200" />
+            <h3>Golden Retriever</h3>
+            <dl class="facts">
+              <dt>Size</dt>
+              <dd>Large &mdash; about 55&ndash;61&nbsp;cm (22&ndash;24&nbsp;in) tall and 25&ndash;34&nbsp;kg (55&ndash;75&nbsp;lb).</dd>
+
+              <dt>Personality</dt>
+              <dd>Gentle, patient and eager to please. Wonderful with children, and happiest carrying something in its mouth.</dd>
+
+              <dt>Everyday care</dt>
+              <dd>Plenty of exercise and play every day. Brush two or three times a week &mdash; daily while it is shedding.</dd>
+            </dl>
+            <button class="button take-button" type="button" data-breed="Golden Retriever">
+              Take to the park
+            </button>
+          </article>
+
+          <!-- ---- Poodle ---- -->
+          <article class="dog-card">
+            <img src="assets/poodle.svg" alt="Illustration of a Poodle." width="200" height="200" />
+            <h3>Poodle</h3>
+            <dl class="facts">
+              <dt>Size</dt>
+              <dd>Three sizes: Toy, Miniature and Standard. A Standard is about 45&ndash;60&nbsp;cm (18&ndash;24&nbsp;in) tall and 20&ndash;32&nbsp;kg (45&ndash;70&nbsp;lb).</dd>
+
+              <dt>Personality</dt>
+              <dd>Very clever and playful, which makes a poodle quick to learn &mdash; and quick to get bored.</dd>
+
+              <dt>Everyday care</dt>
+              <dd>Brush every day or two. The curly coat never stops growing, so it needs a trim every 4&ndash;6&nbsp;weeks.</dd>
+            </dl>
+            <button class="button take-button" type="button" data-breed="Poodle">
+              Take to the park
+            </button>
+          </article>
+
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ================= Footer ================= -->
+    <footer class="site-footer">
+      <p>A small practice page. All three dog drawings are original SVG shapes, written by hand.</p>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

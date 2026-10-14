@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-labelledby="title-golden">
+  <title id="title-golden">Illustration of a Golden Retriever</title>
+
+  <defs>
+    <clipPath id="golden-head">
+      <ellipse cx="100" cy="94" rx="46" ry="43" />
+    </clipPath>
+  </defs>
+
+  <!-- background badge -->
+  <circle cx="100" cy="100" r="94" fill="#FFF0CF" />
+
+  <!-- ears: shorter and set higher than a beagle's -->
+  <ellipse cx="50" cy="110" rx="19" ry="31" fill="#D9A44C" />
+  <ellipse cx="150" cy="110" rx="19" ry="31" fill="#D9A44C" />
+
+  <!-- head -->
+  <ellipse cx="100" cy="94" rx="46" ry="43" fill="#E8B85E" />
+
+  <!-- paler feathering over the top of the head -->
+  <g clip-path="url(#golden-head)">
+    <ellipse cx="100" cy="64" rx="40" ry="26" fill="#F0CB84" />
+  </g>
+
+  <!-- muzzle -->
+  <ellipse cx="100" cy="126" rx="28" ry="22" fill="#F2D08A" />
+
+  <!-- nose and mouth -->
+  <ellipse cx="100" cy="114" rx="12" ry="9" fill="#3A3028" />
+  <path d="M100 123 v7" fill="none" stroke="#C9A96E" stroke-width="2.5" stroke-linecap="round" />
+  <path d="M100 130 q-10 7 -17 0" fill="none" stroke="#C9A96E" stroke-width="2.5" stroke-linecap="round" />
+  <path d="M100 130 q10 7 17 0" fill="none" stroke="#C9A96E" stroke-width="2.5" stroke-linecap="round" />
+
+  <!-- eyes -->
+  <circle cx="83" cy="88" r="7" fill="#3A3028" />
+  <circle cx="117" cy="88" r="7" fill="#3A3028" />
+  <circle cx="85" cy="86" r="2.2" fill="#FFFFFF" />
+  <circle cx="119" cy="86" r="2.2" fill="#FFFFFF" />
+</svg>

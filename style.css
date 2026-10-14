@@ -1,0 +1,202 @@
+/* ============================================================
+   Virtual Dog Park - styles
+   Read this file top to bottom. It is split into six small
+   sections, and the layout is built for a phone first.
+   ============================================================ */
+
+/* ---------- 1. Colours and text defaults ---------- */
+
+:root {
+  --green-dark: #2f5d3a;
+  --green: #4a8b5c;
+  --paper: #f5faf4;
+  --card: #ffffff;
+  --text: #22301f;
+  --muted: #5f6f5c;
+  --line: #d8e6d6;
+  --sun: #f6c453;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--text);
+  background: var(--paper);
+}
+
+.wrapper {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 20px 16px 48px;
+}
+
+h1, h2, h3 {
+  margin: 0 0 8px;
+  line-height: 1.25;
+}
+
+h1 { font-size: 1.9rem; }
+h2 { font-size: 1.4rem; }
+h3 { font-size: 1.15rem; }
+
+p {
+  margin: 0 0 12px;
+}
+
+/* ---------- 2. Header ---------- */
+
+.site-header {
+  padding: 24px 0 20px;
+  margin-bottom: 28px;
+  border-bottom: 2px solid var(--line);
+}
+
+.welcome {
+  max-width: 60ch;
+  color: var(--muted);
+  margin-bottom: 0;
+}
+
+/* ---------- 3. The park box ---------- */
+
+.park {
+  margin-bottom: 32px;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #eaf5e6;
+}
+
+.park-status {
+  /* min-height keeps the box from jumping when the text changes */
+  min-height: 1.65em;
+  margin-bottom: 16px;
+  font-size: 1.05rem;
+}
+
+/* ---------- 4. Buttons ---------- */
+
+.button {
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 999px;
+  font: inherit;
+  font-weight: 600;
+  color: #ffffff;
+  background: var(--green);
+  cursor: pointer;
+}
+
+.button:hover {
+  background: var(--green-dark);
+}
+
+/* A clear outline when the button is reached with the keyboard */
+.button:focus-visible {
+  outline: 3px solid var(--sun);
+  outline-offset: 2px;
+}
+
+.button-quiet {
+  color: var(--green-dark);
+  background: transparent;
+  border: 1px solid var(--green);
+}
+
+.button-quiet:hover {
+  color: #ffffff;
+  background: var(--green);
+}
+
+/* ---------- 5. Dog cards ---------- */
+
+.section-intro {
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+.dog-grid {
+  display: grid;
+  grid-template-columns: 1fr;   /* one card per row on a phone */
+  gap: 20px;
+}
+
+.dog-card {
+  display: flex;
+  flex-direction: column;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--card);
+}
+
+.dog-card img {
+  display: block;
+  width: 100%;
+  max-width: 170px;             /* shrinks on a narrow screen */
+  height: auto;
+  margin: 0 auto 12px;
+}
+
+.facts {
+  margin: 0 0 18px;
+}
+
+.facts dt {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.facts dd {
+  margin: 2px 0 12px;
+}
+
+.facts dd:last-child {
+  margin-bottom: 0;
+}
+
+/* margin-top:auto pushes the button to the bottom of the card,
+   so all three buttons line up even when the text lengths differ */
+.dog-card .button {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+/* Added by script.js when this dog is out in the park */
+.dog-card.selected {
+  border-color: var(--green);
+  box-shadow: 0 0 0 3px rgba(74, 139, 92, 0.25);
+}
+
+/* ---------- 6. Footer and the wider screen ---------- */
+
+.site-footer {
+  margin-top: 40px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+/* From a small laptop upwards, show the three cards side by side. */
+@media (min-width: 720px) {
+  h1 { font-size: 2.4rem; }
+
+  .dog-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
