@@ -14,8 +14,8 @@
     <header class="site-header">
       <h1>Virtual Dog Park</h1>
       <p class="welcome">
-        Welcome to the park! Three very different dogs are waiting here.
-        Read their notes in the encyclopedia below, then take one out for a walk.
+        Welcome to the park! Below you can read about three dog breeds,
+        take one for a walk, or adopt a virtual dog and look after it.
       </p>
     </header>
 
@@ -64,7 +64,8 @@
 
         <!-- Hidden until a dog has been adopted. -->
         <div id="dog-panel" class="dog-panel" hidden>
-          <img id="dog-photo" class="dog-photo" alt="" />
+          <!-- script.js swaps in the right picture and alt text on adoption. -->
+          <img id="dog-photo" class="dog-photo" alt="Illustration of an adopted dog." />
           <div class="dog-info">
             <h3 id="stat-name"></h3>
             <dl class="facts dog-stats">
@@ -178,5 +179,6 @@
   <script src="script.js"></script>
 </body>
 </html>
+
 
 
