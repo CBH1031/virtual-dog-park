@@ -200,3 +200,115 @@ p {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+/* ============================================================
+   7. My Virtual Dog  (added after the park and the encyclopedia)
+   ============================================================ */
+
+.my-dog {
+  margin-bottom: 32px;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--card);
+}
+
+.adopt-form {
+  display: grid;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.field label {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.field input,
+.field select {
+  padding: 9px 12px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  font: inherit;
+  color: inherit;
+  background: #ffffff;
+}
+
+.field input:focus-visible,
+.field select:focus-visible {
+  outline: 3px solid var(--sun);
+  outline-offset: 1px;
+}
+
+.hint {
+  margin: 0;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+/* The message is empty until something happens, so min-height
+   stops the rest of the page jumping when the text appears. */
+.message {
+  min-height: 1.65em;
+  margin: 0 0 14px;
+  font-size: 0.95rem;
+}
+
+.message.error { color: #b3261e; }
+.message.ok    { color: var(--green-dark); }
+
+.dog-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+
+/* The hidden attribute sets display:none in the browser's own
+   stylesheet, but our display:flex above would beat it. So repeat it. */
+.dog-panel[hidden] {
+  display: none;
+}
+
+.dog-photo {
+  display: block;
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.dog-stats {
+  margin-bottom: 18px;
+}
+
+.dog-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+@media (min-width: 720px) {
+  /* breed, name and the Adopt button sit on one row */
+  .adopt-form {
+    grid-template-columns: 1fr 1fr auto;
+    align-items: end;
+  }
+
+  /* picture on the left, the dog's details on the right */
+  .dog-panel {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .dog-photo {
+    margin: 0;
+  }
+}

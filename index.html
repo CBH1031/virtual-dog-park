@@ -32,6 +32,62 @@
         </button>
       </section>
 
+      <!-- ================= My Virtual Dog ================= -->
+      <section class="my-dog" aria-labelledby="my-dog-heading">
+        <h2 id="my-dog-heading">My Virtual Dog</h2>
+        <p class="section-intro">
+          Pick a breed, give your dog a name, then press Adopt.
+        </p>
+
+        <!-- The browser's built-in validation is switched off, so the
+             message under the form comes from our own JavaScript. -->
+        <form id="adopt-form" class="adopt-form" novalidate>
+          <div class="field">
+            <label for="breed-choice">Breed</label>
+            <select id="breed-choice">
+              <option value="Beagle">Beagle</option>
+              <option value="Golden Retriever">Golden Retriever</option>
+              <option value="Poodle">Poodle</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="dog-name">Dog name</label>
+            <input id="dog-name" type="text" maxlength="20" placeholder="Biscuit" autocomplete="off" />
+            <p class="hint">Up to 20 characters.</p>
+          </div>
+
+          <button class="button" type="submit">Adopt</button>
+        </form>
+
+        <p id="adopt-message" class="message" role="status"></p>
+
+        <!-- Hidden until a dog has been adopted. -->
+        <div id="dog-panel" class="dog-panel" hidden>
+          <img id="dog-photo" class="dog-photo" alt="" />
+          <div class="dog-info">
+            <h3 id="stat-name"></h3>
+            <dl class="facts dog-stats">
+              <dt>Breed</dt>
+              <dd id="stat-breed"></dd>
+
+              <dt>Day</dt>
+              <dd id="stat-day"></dd>
+
+              <dt>Growth stage</dt>
+              <dd id="stat-stage"></dd>
+
+              <dt>Happiness</dt>
+              <dd id="stat-happiness"></dd>
+            </dl>
+            <div class="dog-actions">
+              <button id="feed-button" class="button" type="button">Feed</button>
+              <button id="play-button" class="button" type="button">Play</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- ================= Dog Encyclopedia ================= -->
       <section class="encyclopedia" aria-labelledby="encyclopedia-heading">
         <h2 id="encyclopedia-heading">Dog Encyclopedia</h2>
@@ -113,3 +169,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+
